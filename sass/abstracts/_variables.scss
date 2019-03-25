@@ -1,0 +1,57 @@
+//-------------------------------------------------------
+//- ABSTRACTS :: VARIABLES
+//-------------------------------------------------------
+
+//Fonts
+$font-family-base: 'Inter UI';
+$font-family-icons: 'Font Awesome 5 Free';
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../fonts/Inter-UI-Regular.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 400;
+  src: url("../fonts/Inter-UI-Italic.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 500;
+  src: url("../fonts/Inter-UI-Medium.woff2") format("woff2"),
+       url("../fonts/Inter-UI-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 500;
+  src: url("../fonts/Inter-UI-MediumItalic.woff2") format("woff2"),
+       url("../fonts/Inter-UI-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Material-Icons.woff2") format('woff2');
+}
+
+//Font-size
+$font-size-base: 16px;
+$font-size-medium: 14px;
+$font-size-small: 12px;
+$font-size-xsmall: 10px;
+$font-size-large: 18px;
+$font-size-xlarge: 24px;
+
+//Font-weight
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+

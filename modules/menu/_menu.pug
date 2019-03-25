@@ -1,0 +1,56 @@
+//-------------------------------------------------------
+//- Modules :: Menu
+//-------------------------------------------------------
+
+-
+  var menus = [
+    {
+      title: "Overview", 
+      active: true
+    },
+    { 
+      title: "Pages",
+      submenu: [
+        {
+          title: 'App Pages'
+        }, 
+        {
+          title:'Utility Pages'
+        }, 
+        {
+          title:'Layouts'
+        }
+      ]
+    },
+    { 
+      title: "Components",
+      submenu: [
+        {
+          title: 'Bootstrap'
+        }, 
+        {
+          title:'Pipeline'
+        }
+      ]
+    },
+    {
+      title: "Documentation"
+    },
+    {
+      title: "Changelog"
+    }
+  ];
+
+mixin main-menu()
+  div#sidebar-menu.main-menu-container
+    ul.main-menu
+      each item in menus
+        li.main-menu__item.js-menu-item(class=item.submenu ? 'main-menu__item--has-children' : '', class=item.active ? 'main-menu__item--active' : '')
+          a.main-menu__link.js-menulink(href= href ? href : "#")= item.title
+          if item.submenu 
+            ul.sub-menu.js-submenu
+              each sub in item.submenu
+                li.main-menu__item.js-sub-item(class= sub.active ? 'main-menu__item--active' : '')
+                  a.main-menu__link(href= href ? href : "#")= sub.title
+                          
+                                                    

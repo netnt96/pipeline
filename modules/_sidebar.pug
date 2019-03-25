@@ -1,0 +1,96 @@
+//-------------------------------------------------------
+//- Modules :: Sidebar
+//-------------------------------------------------------
+
+mixin sidebar()
+  aside#js-sidebar.left-sidebar
+    .logo
+      a.logo__link(href='#')
+        h1
+          img(src="images/logo.svg", alt="logo-main")
+
+    .d-mobile
+      button.btn--collaspe.js-btn-collaspe
+        <span class="btn--collaspe__icon"></span>
+      
+      .user-profile.js-dropdown
+        .user-profile__avatar.js-dropdown-toggle
+          img.img-fluid(src='images/avatar-male-1.jpg' alt='user-avatar')
+
+        .user-profile__setting.js-dropdown-list
+          ul.list-setting
+            -
+              var datas = [
+                {
+                  text: 'Profile'
+                },
+                {
+                  text: 'Account Setting'
+                },
+                {
+                  text: 'Log out'
+                }
+              ]
+
+            each item in datas
+              li.list-setting__item
+                a.list-setting__link(href='#')=item.text
+
+    .left-sidebar__collapse.js-sidebar-collapse
+      +main-menu()
+
+      .quick-links
+        span.quick-links__title Quick Links
+        ul.quick-links__list
+          each item in ['Team Overview', 'Project', 'Single Task', 'Kanban Board']
+            li.quick-links__item 
+              a.quick-links__link= item
+      
+      form.search-form 
+        span.search-form__icon 
+          i(class="fas fa-search")
+        input.search-form__field(type="text", placeholder="Search")
+
+      .dropdown.js-dropdown
+        button.btn--toggle.js-dropdown-toggle Add New
+        ul.dropdown__list.js-dropdown-list
+          -
+            var data = [
+              {
+                text: 'Team'
+              },
+              {
+                text: 'Project'
+              },
+              {
+                text: 'Task'
+              }
+            ]
+          each item in data 
+            li.dropdown__item
+              a.dropdown__link(href="#")= item.text
+          
+    .user-profile.js-dropdown
+      .user-profile__avatar.js-dropdown-toggle
+        img.img-fluid(src='images/avatar-male-1.jpg' alt='user-avatar')
+
+      .user-profile__setting.js-dropdown-list
+        ul.list-setting
+          -
+            var datas = [
+              {
+                text: 'Profile'
+              },
+              {
+                text: 'Account Setting'
+              },
+              {
+                text: 'Log out'
+              }
+            ]
+
+          each item in datas
+            li.list-setting__item
+              a.list-setting__link(href='#')=item.text
+
+
